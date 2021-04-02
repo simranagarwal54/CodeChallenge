@@ -1,0 +1,16 @@
+class Solution{   
+public:
+    int countZeroes(int arr[], int n) {
+        // code here
+        int f = -1, l=n, mid;
+    while((l-f)>1){
+        mid = (l+f)/2;
+        // if element at mid == 1, we have a possible 0 in the right, so f = mid
+        if(arr[mid]==1)
+        f=mid;
+        else
+        l=mid;
+    }
+    return n-l;
+    }
+};
