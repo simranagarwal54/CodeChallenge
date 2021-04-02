@@ -1,0 +1,16 @@
+class Solution{
+public:
+	
+	int findMaximum(int arr[], int n) {
+	    // code here
+	    int f = -1, l=n, mid;
+        while((l-f)>1){
+            mid = (l+f)/2;
+            if(arr[mid]>arr[mid-1])
+                f=mid;
+            else
+                l=mid;
+    }
+    return arr[f];
+	}
+};
